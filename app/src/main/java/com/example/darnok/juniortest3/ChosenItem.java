@@ -8,33 +8,32 @@ import android.widget.TextView;
 
 public class ChosenItem extends MainActivity {
 
-    TextView textViewName;
-    ProgressButton progressButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_for_listview);
 
         //Добавление кнопки "назад" в левом верхнем углу
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         //Получение сообщения из MainActivity
         Intent intent = getIntent();
-        int message = intent.getIntExtra(MainActivity.EXTRA_MESSAGE, 0);
+        int position = intent.getIntExtra("position", 0);
 
         //Смена заголовка.
-        setTitle("Row N " + message);
+        setTitle("Row N " + position);
 
-        progressButton = (ProgressButton)findViewById(R.id.progress_button);
-        textViewName = (TextView)findViewById(R.id.textViewName);
+        ProgressButton progressButton = findViewById(R.id.progress_button);
+        TextView textViewName = findViewById(R.id.text_view_name);
 
         //Выставленме нужного номера Text View
-        textViewName.setText(String.valueOf(message));
+        textViewName.setText(String.valueOf(position));
 
         //Добавление краски в кнопку с индикатором прогресса
-        progressButton.setRatio(Float.parseFloat(data.get(message).col2));
-        progressButton.setText(String.valueOf(data.get(message).col2));
+        progressButton.setRatio(data.get(position).col2);
+        progressButton.setText(String.valueOf(data.get(position).col2));
     }
 }

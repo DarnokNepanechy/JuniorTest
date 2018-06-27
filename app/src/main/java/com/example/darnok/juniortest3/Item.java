@@ -1,15 +1,15 @@
 package com.example.darnok.juniortest3;
 
-public class Item {
+class Item {
 
     //Заголовок
-    String col1;
+    final Integer col1;
 
     //Подзаголовок
-    String col2;
+    final Float col2;
 
     //Конструктор
-    Item(String c1, String c2){
+    Item(Integer c1, Float c2){
         this.col1 = c1;
         this.col2 = c2;
     }

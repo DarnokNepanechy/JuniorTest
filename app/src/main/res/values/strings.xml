@@ -3,9 +3,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="name">Name</string>
-    <string name="button">Button</string>
     <string name="ok">OK</string>
     <string name="row">Row</string>
-    <string name="percent">%(0..1)</string>
+    <string name="percent">%[0..1]</string>
     <string name="progress_button">progress button</string>
+    <string name="input_int_number">int number [0 ; 99].</string>
+    <string name="input_float_number">float number [0 ; 1].</string>
 </resources>

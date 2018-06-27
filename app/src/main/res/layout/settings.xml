@@ -10,32 +10,42 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editPer"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:text="@string/percent" />
 
     <EditText
         android:id="@+id/editRow"
+        android:hint="@string/input_int_number"
+        android:inputType="number"
         android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+        android:maxLines="1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editRow"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:text="@string/row" />
 
     <EditText
         android:id="@+id/editPer"
+        android:hint="@string/input_float_number"
+        android:inputType="numberDecimal"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="123dp" />
+        android:layout_marginTop="123dp"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/okButton"
