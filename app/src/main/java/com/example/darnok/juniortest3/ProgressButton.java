@@ -37,7 +37,7 @@ public class ProgressButton extends AppCompatButton {
         Drawable fill = getResources().getDrawable(R.drawable.abc_btn_default_mtrl_shape);
         fill.setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
         fill.setAlpha(100);
-        fill.setBounds(-8, -12, (int) (getWidth()*mRatio)+8,  getHeight()+12);
+        fill.setBounds(0, 0, (int) ((getWidth())*mRatio),  getHeight());
         fill.draw(canvas);
         super.onDraw(canvas);
     }

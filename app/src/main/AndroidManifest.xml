@@ -13,7 +13,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="MainActivity">
+            android:label="Test for junior">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN" />
@@ -29,7 +29,8 @@
 
         <activity
             android:name=".ChosenSettings"
-            android:label="ChosenSettings">
+            android:label="Settings"
+            android:launchMode="singleTop">
         </activity>
 
     </application>

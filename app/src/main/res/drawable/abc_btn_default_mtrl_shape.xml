@@ -13,19 +13,10 @@
 <!-- Used as the canonical button shape. -->
 <inset xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:override="true"
-    android:insetLeft="4dp"
-    android:insetTop="6dp"
-    android:insetRight="4dp"
-    android:insetBottom="6dp">
-    <shape android:shape="rectangle">
+    tools:override="true">
+    <shape>
         <corners
             android:radius="2dp" />
         <solid android:color="@android:color/white" />
-        <padding
-            android:left="8dp"
-            android:top="4dp"
-            android:right="8dp"
-            android:bottom="8dp" />
     </shape>
 </inset>

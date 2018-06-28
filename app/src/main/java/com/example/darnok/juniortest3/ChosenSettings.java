@@ -16,8 +16,6 @@ public class ChosenSettings extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-        setTitle("Settings");
-
         //Добавление кнопки "назад" в левом верхнем углу
         if(getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -32,9 +30,11 @@ public class ChosenSettings extends MainActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (editRow.getText().toString().equals("") || editPer.getText().toString().equals("")){
+
+                if (editRow.getText().toString().equals("") || editPer.getText().toString().equals("")
+                        ||  editRow.getText().toString().length() > 2 || editPer.getText().toString().length() > 10) {
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Input Error. You must input something.", Toast.LENGTH_LONG);
+                            "Input Error. Number probably too short or to long.", Toast.LENGTH_LONG);
                     toast.show();
                 } else {
                     int rowNumber = Integer.parseInt(editRow.getText().toString());
